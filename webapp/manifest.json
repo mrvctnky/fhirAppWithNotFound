@@ -1,0 +1,107 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "myhealthapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "MyHealthApp",
+		"description": "This app provides an overview to work with the UI5 FHIRModel",
+		"dataSources": {
+			"fhir": {
+				"uri": "/fhir/",
+				"type": "FHIR"
+			}
+		}
+	},
+	
+	"sap.ui": {
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		],
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "myhealthapp.view.App",
+			"type": "XML",
+			"id": "appView"
+		},
+		"dependencies": {
+			"minUI5Version": "1.54.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"resourceRoots": {
+			"sap.health.model.fhir": "resources/sap/health/model/fhir/"
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "myhealthapp.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.health.model.fhir.FHIRModel",
+				"dataSource": "fhir",
+				"settings": {
+					"performanceBoost": true
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "myhealthapp.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				 }
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "home"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "Home",
+					"viewId": "home",
+					"viewLevel": 1
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "notFound",
+					"transition": "show"
+				}
+			}
+		}
+	}
+}

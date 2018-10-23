@@ -1,0 +1,19 @@
+{
+	"welcomeFile": "/MyHealthApp/index.html",
+	"authenticationMethod": "none",
+	"routes": [{
+			"source": "^/MyHealthApp/resources/sap/health/model/fhir/(.*)$",
+			"target": "$1",
+			"localDir": "../node_modules/@sap/sap-fhir-ui5-model/src/sap/health/model/fhir"
+		}, {
+			"source": "^/MyHealthApp/(.*)$",
+			"target": "$1",
+			"localDir": "../webapp"
+		}, {
+			"source": "^/fhir/(.*)$",
+			"target": "/$1",
+			"destination": "fhirBackend",
+			"csrfProtection": false
+		}
+	]
+}

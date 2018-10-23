@@ -1,0 +1,1 @@
+export destinations=[{\"name\"\ \:\ \"fhirBackend\"\,\ \"url\"\ \:\ \"http://localhost:8080/sapfhir/SMART/fhir/\"}]

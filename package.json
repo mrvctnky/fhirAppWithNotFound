@@ -1,0 +1,12 @@
+{
+	"name": "@my/myhealthapp",
+	"version": "0.0.1",
+	"dependencies": {
+		"@sap/sap-fhir-ui5-model": "0.0.2-alpha.20180927121526",
+		"@sap/approuter": "5.6.4"
+	},
+	"scripts": {
+		"start:local": "node node_modules/@sap/approuter/approuter.js -w localAppr",
+		"start": "node node_modules/@sap/approuter/approuter.js -w"
+	}
+}

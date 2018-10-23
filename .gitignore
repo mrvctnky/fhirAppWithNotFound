@@ -1,0 +1,14 @@
+/target/
+/bin/
+.settings/
+.classpath
+bower_components/
+node_modules/
+
+.xmake/
+gen/
+coverage/
+npm-debug.log
+/.idea
+/metadata-ui.iml
+package-lock.json
