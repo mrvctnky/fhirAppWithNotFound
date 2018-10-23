@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"myhealthapp/controller/BaseController"
+], function(BaseController) {
 	"use strict";
 
-	return Controller.extend("myhealth.controller.Home", {
+	return BaseController.extend("myhealthapp.controller.Home", {
 
 		onMyPatientsTilePress: function(oEvent) {
 			var iNumberOfPatients = oEvent.getSource().getTileContent()[0].getContent().getValue() || 0;
