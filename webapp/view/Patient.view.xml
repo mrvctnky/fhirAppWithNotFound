@@ -4,7 +4,7 @@
     xmlns="sap.m" 
     controllerName="myhealthapp.controller.Patient"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-    <Page title="{i18n>title}">
+    <Page title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
 		<content>
             <List headerText="Patient:" items="{/Patient}">
                 <StandardListItem title="{id}: {name/0/given} {name/0/family} Gender:{gender}, Birthdate:{birthDate} " />
