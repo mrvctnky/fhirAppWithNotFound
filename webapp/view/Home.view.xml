@@ -21,7 +21,6 @@
 							</items>
 					</IconTabBar>
 					
-	
 
 					<GenericTile id="myPatientsTile" binding="{/Patient}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="My Patients" press="onNavigateToPatientScreen">
 						<TileContent unit="Patients">
@@ -33,7 +32,6 @@
 							<NumericContent value="{%total%}" icon="sap-icon://org-chart"/>
 						</TileContent>
 					</GenericTile>
-
 					
 		</content>
 		<footer>
