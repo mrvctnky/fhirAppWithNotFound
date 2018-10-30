@@ -1,0 +1,14 @@
+<mvc:View
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+    controllerName="myhealthapp.controller.Patient"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page title="{i18n>title}">
+		<content>
+            <List headerText="Patient:" items="{/Patient}">
+                <StandardListItem title="{id}: {name/0/given} {name/0/family} Gender:{gender}, Birthdate:{birthDate} " />
+            </List>
+        </content>
+    </Page>
+</mvc:View>

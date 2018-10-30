@@ -20,7 +20,8 @@
 								</IconTabFilter>
 							</items>
 					</IconTabBar>
-
+					
+	
 
 					<GenericTile id="myPatientsTile" binding="{/Patient}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="My Patients" press="onMyPatientsTilePress">
 						<TileContent unit="Patients">
@@ -36,6 +37,8 @@
 						headerText="Patient:" items="{/Patient}">
 						<StandardListItem title="{id}: {name/0/given} {name/0/family} Gender:{gender}, Birthdate:{birthDate} " />
 					</List>
+
+					
 		</content>
 		<footer>
 			<Toolbar>
