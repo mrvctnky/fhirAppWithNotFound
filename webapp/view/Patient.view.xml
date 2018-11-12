@@ -7,7 +7,7 @@
     <Page title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
 		<content>
             <List headerText="Patient:" items="{/Patient}">
-                <StandardListItem title="{id}: {name/0/given} {name/0/family} Gender:{gender}, Birthdate:{birthDate} " />
+                <StandardListItem title="{id}: {name/[use='official']/given} {name/[use='official']/family} Gender:{gender}, Birthdate:{birthDate}" />
             </List>
         </content>
     </Page>
