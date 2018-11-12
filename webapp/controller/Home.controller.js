@@ -1,6 +1,7 @@
-sap.ui.define([
-	"myhealthapp/controller/BaseController"
-], function(BaseController) {
+sap.ui.define([ 'sap/m/MessageToast',
+	'sap/ui/core/UIComponent',
+	'myhealthapp/controller/BaseController'
+], function(MessageToast, UIComponent, BaseController) {
 	"use strict";
 
 	return BaseController.extend("myhealthapp.controller.Home", {
@@ -9,17 +10,27 @@ sap.ui.define([
 		},
 
 		initializeRouter: function(){
-			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			this.oRouter = UIComponent.getRouterFor(this);
 		},
 
 		onMyPatientsTilePress: function(oEvent) {
 			var iNumberOfPatients = oEvent.getSource().getTileContent()[0].getContent().getValue() || 0;
-			sap.m.MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("patientsTileInfo", [iNumberOfPatients]));
+			MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("patientsTileInfo", [iNumberOfPatients]));
 		},
 
 		onMyOrganzationsTilePress: function(oEvent) {
 			var iNumberOfOrganizations = oEvent.getSource().getTileContent()[0].getContent().getValue() || 0;
-			sap.m.MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("organzationsTileInfo", [iNumberOfOrganizations]));
+			MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("organzationsTileInfo", [iNumberOfOrganizations]));
+		},
+
+		onMyObservationsTilePress: function(oEvent) {
+			var iNumberOfObservation = oEvent.getSource().getTileContent()[0].getContent().getValue() || 0;
+			MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("observationTileInfo", [iNumberOfObservation]));
+		},
+
+		onMyEncounterTilePress: function(oEvent) {
+			var iNumberOfEncounter = oEvent.getSource().getTileContent()[0].getContent().getValue() || 0;
+			MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("encounterTileInfo", [iNumberOfEncounter]));
 		},
 
 		onNavigateToPatientScreen : function() {
