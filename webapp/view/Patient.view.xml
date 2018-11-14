@@ -4,11 +4,34 @@
     xmlns="sap.m" 
     controllerName="myhealthapp.controller.Patient"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-    <Page title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
-		<content>
-            <List headerText="Patient:" items="{/Patient}">
-                <StandardListItem title="{id}: {name/[use='official']/given} {name/[use='official']/family} Gender:{gender}, Birthdate:{birthDate}" />
-            </List>
-        </content>
-    </Page>
+    <Table items="{/Patient}" growingScrollToLoad="true" growing="true" growingThreshold="11">
+        <headerToolbar>
+			<Toolbar>
+				<Title text="Patienten" level="H2"/>
+				<ToolbarSpacer />
+				<SearchField id="searchField" search="onSearchEmployeesTable" width="50%"/>
+				<Button icon="sap-icon://sort" press="onSortButtonPressed" />
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column id="patientIDCol"><Text text="{i18n>patientID}"/></Column>
+			<Column id="firstNameCol" demandPopin="true"><Text text="{i18n>firstName}"/></Column>
+			<Column id="lastNameCol" demandPopin="true"><Text text="{i18n>lastName}"/></Column>
+            <Column id="birthDateCol" demandPopin="true"><Text text="{i18n>birthDate}"/></Column>
+            <Column id="genderCol" demandPopin="true"><Text text="{i18n>gender}"/></Column>
+            <Column><Text text="Some info"/></Column>
+		</columns>
+        <items>
+			<ColumnListItem>
+                        <cells>
+                            <Text text="{id}"/>
+                            <Text text="{name/[use='official']/given}"/>
+                            <Text text="{name/[use='official']/family}"/>
+                            <Text text="{birthDate}"/>
+                            <Text text="{gender}"/>
+                            <Text text="{identifier/0/type/coding/0/code}"/>
+                        </cells>
+			</ColumnListItem>
+		</items>
+    </Table>
 </mvc:View>

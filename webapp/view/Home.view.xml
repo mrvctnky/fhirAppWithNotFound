@@ -26,7 +26,7 @@
 									<content>
 					    				<Image class="sapui5logo" src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png"  />
 					    				<Label text="Home" width="90%" id="label_home" textAlign="Center" design="Bold"/>
-											<List headerText="Patient:" items="{/Patient}" growingScrollToLoad="true" growing="true" growingThreshold="20">
+											<List headerText="Patient:" items="{/Patient}" growingScrollToLoad="true" growing="true" growingThreshold="10">
 												<StandardListItem title="{id}: {name/[use='official']/given} {name/[use='official']/family} Gender:{gender}, Birthdate:{birthDate}" />
 											</List>
 									</content>
@@ -44,8 +44,7 @@
 									<Label text="Guideline Adherence" width="90%" id="label_guideline" textAlign="Center" design="Bold"/>
 								</IconTabFilter>
 
-								<IconTabFilter id="patientlistTab" text="Patient List" key="PatientList">
-									<Label text="Patient List" width="90%" id="label_patientlist" textAlign="Center" design="Bold"/>
+								<IconTabFilter id="patientlistTab"  expanded="true" expandable="true" text="Patient List" key="PatientList">
 									<mvc:XMLView viewName="myhealthapp.view.Patient"></mvc:XMLView>
 								</IconTabFilter>
 							</items>
