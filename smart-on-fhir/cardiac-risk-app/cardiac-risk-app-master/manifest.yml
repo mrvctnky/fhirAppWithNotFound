@@ -1,0 +1,5 @@
+---
+applications:
+- name: cardiac-risk-app
+  memory: 100M
+  path: .
