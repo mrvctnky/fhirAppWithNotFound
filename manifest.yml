@@ -1,0 +1,15 @@
+---
+applications:
+- name: my-health-app
+  memory: 100M
+  path: .  
+  env:
+    destinations: >
+      [
+        {
+          "name":"fhirserver",
+          "url":"https://mo-e7a792be7.mo.sap.corp:51006/sapfhir/SMART/"
+        }
+      ]
+  requires:
+    - fhirserver          

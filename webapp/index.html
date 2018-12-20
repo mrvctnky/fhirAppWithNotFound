@@ -12,6 +12,8 @@
 		</script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script>
+
+			
 			sap.ui.getCore().attachInit(function() {
 
 				var oComponent = sap.ui.getCore().createComponent({
@@ -19,7 +21,7 @@
 					name : "myhealthapp",
 					height : "100%"
 				});
-
+				
 				new sap.m.Shell({
 					app: new sap.ui.core.ComponentContainer("healthComponentContainer",{
 						component : oComponent

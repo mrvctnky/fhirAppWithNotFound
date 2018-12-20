@@ -4,19 +4,21 @@
 	"routes": [{
 			"source": "^/MyHealthApp/resources/sap/health/model/fhir/(.*)$",
 			"target": "$1",
+			"csrfProtection": false,
 			"localDir": "node_modules/@sap/sap-fhir-ui5-model/src/sap/health/model/fhir",
-			"authenticationType": "xsuaa"
+			"authenticationType": "none"
 		}, {
 			"source": "^/MyHealthApp/(.*)$",
 			"target": "$1",
-			"localDir": "dist",
-			"authenticationType": "xsuaa"
+			"csrfProtection": false,
+			"localDir": "webapp",
+			"authenticationType": "none"
 		}, {
 			"source": "^/fhir/(.*)$",
 			"target": "/fhir/$1",
-			"destination": "fhirBackend",
+			"destination": "fhirserver",
 			"csrfProtection": false,
-			"authenticationType": "xsuaa"
+			"authenticationType": "none"
 		}
 	]
 }

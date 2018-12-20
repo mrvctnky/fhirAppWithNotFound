@@ -35,6 +35,6 @@ sap.ui.define([ 'sap/m/MessageToast',
 
 		onNavigateToPatientScreen : function() {
 			this.oRouter.navTo("patientList");
-		},
+		}
 	});
 });
