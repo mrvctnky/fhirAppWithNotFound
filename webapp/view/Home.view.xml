@@ -15,7 +15,7 @@
 													<NumericContent  truncateValueTo="6" value="{%total%}"/>
 												</TileContent>
 											</GenericTile>
-											<GenericTile id="myEncounterTile" binding="{/Encounter}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Total Encounter" press="onMyEncounterTilePress">
+											<GenericTile id="myEncounterTile" binding="{/Encounter}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Total" press="onMyEncounterTilePress">
 												<TileContent unit="Encounter">
 													<NumericContent value="{%total%}" icon="sap-icon://org-chart"/>
 												</TileContent>
