@@ -1,1 +1,1 @@
-set destinations=[{"name" : "fhirBackend", "url" : "http://localhost:9090/baseR4"}]
+set destinations=[{"name" : "fhirBackend", "url" : "http://localhost:8080/sapfhir/SMART/fhir/"}]
