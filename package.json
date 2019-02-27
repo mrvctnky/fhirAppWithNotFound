@@ -2,7 +2,7 @@
 	"name": "@my/myhealthapp",
 	"version": "0.0.1",
 	"dependencies": {
-		"@sap/sap-fhir-ui5-model": "0.0.2-alpha.20180927121526",
+		"@sap/sap-fhir-ui5-model": "0.0.2-alpha.20190219122428",
 		"@sap/approuter": "5.6.4"
 	},
 	"devDependencies": {

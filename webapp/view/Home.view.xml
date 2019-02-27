@@ -22,31 +22,52 @@
 											</GenericTile>
 								</IconTabFilter>
 
-								<IconTabFilter id="homeTab" text="Home" key="Home">
+								<!-- <IconTabFilter id="homeTab" text="Home" key="Home">
 									<content>
 					    				<Image class="sapui5logo" src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png"  />
 					    				<Label text="Home" width="90%" id="label_home" textAlign="Center" design="Bold"/>
 											<List headerText="Patient:" items="{/Patient}" growingScrollToLoad="true" growing="true" growingThreshold="10">
-												<StandardListItem title="{id}: {name/[use='official']/given} {name/[use='official']/family} Gender:{gender}, Birthdate:{birthDate}" />
+												<StandardListItem title=" {id}: {name/[use='official']/given} {name/[use='official']/family} Gender:{gender}, Birthdate:{birthDate}" />
 											</List>
 									</content>
-								</IconTabFilter>
-
-								<IconTabFilter id="antibioticTab" text="Antibiotic Stewardship" key="Antibiotic">
+								</IconTabFilter> -->
+ 
+								<!-- <IconTabFilter id="antibioticTab" text="Antibiotic Stewardship" key="Antibiotic">
 									<content>
 										<Image class="sapui5logo" src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png" />
 					    				<Label text="Antibiotic Stewardship Dashboard" width="90%" id="label_antibiotic" textAlign="Center" design="Bold"/>
 									</content>
-								</IconTabFilter>
+								</IconTabFilter> -->
 								
-								<IconTabFilter id="guidelineTab" text="Guideline Adherence" key="Guideline">
+								<!-- <IconTabFilter id="guidelineTab" text="Guideline Adherence" key="Guideline">
 									<Image class="sapui5logo" src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png"/>
 									<Label text="Guideline Adherence" width="90%" id="label_guideline" textAlign="Center" design="Bold"/>
-								</IconTabFilter>
+								</IconTabFilter> -->
 
 								<IconTabFilter id="patientlistTab"  expanded="true" expandable="true" text="Patient List" key="PatientList">
+									<Image class="sapui5logo" src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png"/>
 									<mvc:XMLView viewName="myhealthapp.view.Patient"></mvc:XMLView>
 								</IconTabFilter>
+
+								<IconTabFilter id="chartTab"  expanded="true" expandable="true" text="Chart" key="Chart">
+									<mvc:XMLView viewName="myhealthapp.view.Antibiotics"></mvc:XMLView>
+								</IconTabFilter>
+
+								<IconTabFilter id="observationsTab"  expanded="true" expandable="true" text="Observation" key="Observation">
+									<!-- <mvc:XMLView viewName="myhealthapp.view.Observations"></mvc:XMLView> -->
+									<mvc:XMLView viewName="myhealthapp.view.AntibioticList"></mvc:XMLView>
+								</IconTabFilter>
+								
+								<!-- <IconTabFilter id="testTab" text="Tested Antibiotics">
+									<content>
+					    				<Label text="Tested Antibiotics" width="90%" textAlign="Center" design="Bold"/>
+											<List items="{path: '/Observation', parameters: { request: { _include: 'Patient:patient', patient: 'Patient/smart-765583'}}}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+												<StandardListItem title=" {id}: {code/coding/0/display}" />
+											</List>
+									</content>
+								</IconTabFilter> -->
+
+
 							</items>
 					</IconTabBar>	
 </core:View>

@@ -124,7 +124,12 @@ sap.ui.define([
 				// Note: no input validation is implemented here
 				this._oVSD.setSelectedSortItem(sSortField);
 				this._oVSD.setSortDescending(bSortDescending);
+			},
+			onPress: function (oEvent) {
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("antibiotic");
 			}
+			
 
 		});
 

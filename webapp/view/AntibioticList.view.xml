@@ -1,0 +1,65 @@
+<mvc:View
+    height="100%"
+	width="100%"
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+                 <List binding="{/Patient/smart-765583}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title="Given name(s): {name/[use='official']/given} Family name: {name/[use='official']/family}"/>
+                </List>
+                <List headerText="Antibiotics" id="myList" binding="{/Observation/obx2-1}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display}" number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-2}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display}" number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-4}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-6}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-8}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-10}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-12}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-14}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-16}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-18}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-20}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-22}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-24}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-26}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-28}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-30}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-32}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+                <List binding="{/Observation/obx2-34}" growingScrollToLoad="true" growing="true" growingThreshold="10">
+                    <ObjectListItem title=" {code/coding/0/display} " number="{interpretation/coding/0/code}" />
+                </List>
+</mvc:View>

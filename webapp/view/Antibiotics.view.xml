@@ -1,0 +1,25 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	xmlns="sap.suite.ui.microchart"
+	xmlns:layout="sap.ui.layout"
+	controllerName="myhealthapp.controller.Antibiotics">
+
+	<m:Text text="{/Patient/smart-765583/name/[use='official']/given} {/Patient/smart-765583/name/[use='official']/family}" class="sapUiSmallMargin">
+		<m:layoutData>
+			<layout:GridData span="XL12 L12 M12 S12"/>
+		</m:layoutData>
+	</m:Text>
+	<m:FlexBox width="22rem" height="13rem" alignItems="left" justifyContent="SpaceBetween">
+		<m:items>
+			<InteractiveDonutChart selectionChanged="onSelectionChanged" displayedSegments="4" press="press">
+				<segments>
+					<InteractiveDonutChartSegment label="resistant" value="16" displayedValue="16%"/>
+					<InteractiveDonutChartSegment label="sensitive" value="84" displayedValue="84%"/>
+					<InteractiveDonutChartSegment label="intermediate" value="0" displayedValue="0%"/>
+				</segments>
+			</InteractiveDonutChart>
+		</m:items>
+	</m:FlexBox>
+
+</mvc:View>

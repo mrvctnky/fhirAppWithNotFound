@@ -6,10 +6,10 @@
     xmlns="sap.m" 
     controllerName="myhealthapp.controller.Patient"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-    <Table id="patientsTable" items="{/Patient}" growingScrollToLoad="true" growing="true" growingThreshold="11">
+    <Table id="patientsTable" items="{/Patient}" growingScrollToLoad="true" growing="true" growingThreshold="5">
         <headerToolbar>
 			<Toolbar>
-				<Title text="Patienten" level="H2"/>
+				<Title text="Patients" level="H2"/>
 				<ToolbarSpacer />
 				<SearchField id="searchField" search="onSearchPatientsTable" width="50%"/>
 				<Button icon="sap-icon://sort" press="onSortButtonPressed" />
@@ -21,17 +21,16 @@
 			<Column id="lastNameCol" demandPopin="true"><Text text="{i18n>lastName}"/></Column>
             <Column id="birthDateCol" demandPopin="true"><Text text="{i18n>birthDate}"/></Column>
             <Column id="genderCol" demandPopin="true"><Text text="{i18n>gender}"/></Column>
-            <Column><Text text="Some info"/></Column>
 		</columns>
         <items>
-			<ColumnListItem>
+			<ColumnListItem type="Navigation" press="onPress">
                         <cells>
                             <Text text="{id}"/>
                             <Text text="{name/[use='official']/given}"/>
                             <Text text="{name/[use='official']/family}"/>
                             <Text text="{birthDate}"/>
                             <Text text="{gender}"/>
-                            <Text text="{identifier/0/type/coding/0/code}"/>
+                            <!-- <Text text="{identifier/0/type/coding/0/code}"/> -->
                         </cells>
 			</ColumnListItem>
 		</items>

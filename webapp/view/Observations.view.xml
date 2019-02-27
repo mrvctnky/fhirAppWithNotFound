@@ -1,0 +1,20 @@
+<mvc:View
+    height="100%"
+	width="100%"
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+    <Table id="observationsTable"  binding="{/Patient/smart-765583}">
+        <columns>
+            <Column><Text text="Given name(s): {name/[use='official']/given} Family name: {name/[use='official']/family}"/></Column>
+		</columns>
+        <items>
+            <ColumnListItem>
+                        <cells>
+                            <Text text="{code/coding/0/display}"/>
+                        </cells>
+			</ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>
