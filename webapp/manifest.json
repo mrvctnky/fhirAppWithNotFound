@@ -120,8 +120,7 @@
 				},
 				"detail": {
 				  "viewId": "antibiotic",
-				  "viewName": "Antibiotics",
-				  "viewLevel": 3
+				  "viewName": "Antibiotics"	  
 				}
 			}
 		}
